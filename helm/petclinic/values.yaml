@@ -5,7 +5,7 @@
 replicaCount: 1
 
 image:
-  repository: initsixcloud/petclinic
+  repository: iheanyi1989/petclinic #can override this using --set-image environment variable
   tag: latest
   pullPolicy: IfNotPresent
 
