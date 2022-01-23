@@ -32,8 +32,10 @@ spec:
             memory: '1G'
         ports:
         - containerPort: 8080
-      imagePullSecrets:
-      - name: regcred
+      {{- if .Values.imagePullSecrets }}
+        imagePullSecrets:
+        - name: {{ .Values.imagePullSecrets }}
+      {{- end }}
 
 
 
