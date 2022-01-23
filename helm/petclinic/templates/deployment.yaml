@@ -19,6 +19,10 @@ spec:
       labels:
         app: petclinic-app
     spec:
+      {{- if .Values.imagePullSecrets }}
+      imagePullSecrets:
+      - name: {{ .Values.imagePullSecrets }}
+      {{- end }}
       containers:
       - name: petclinic-container
         image: "{{ .Values.image.repository }}:{{ .Values.image.tag }}"
@@ -32,10 +36,4 @@ spec:
             memory: '1G'
         ports:
         - containerPort: 8080
-      {{- if .Values.imagePullSecrets }}
-        imagePullSecrets:
-        - name: {{ .Values.imagePullSecrets }}
-      {{- end }}
-
-
 
