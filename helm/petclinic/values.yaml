@@ -5,13 +5,13 @@
 replicaCount: 1
 
 image:
-  repository: iheanyi1989/petclinic 
+  repository: initsixcloud/petclinic 
   # can override the above using --set image.repository=*** environment variable
   tag: ""
   # can override the above using --set image.tag=*** environment variable
   pullPolicy: IfNotPresent
 
-imagePullSecrets: docker-hub
+imagePullSecrets: [] #docker-hub
 nameOverride: ""
 fullnameOverride: ""
 
