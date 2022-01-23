@@ -5,8 +5,10 @@
 replicaCount: 1
 
 image:
-  repository: iheanyi1989/petclinic #can override this using --set-image environment variable
-  tag: latest
+  repository: iheanyi1989/petclinic 
+  #can override the above using --set image.repository=*** environment variable
+  tag: 3
+  ##can override the above using --set image.tag=*** environment variable
   pullPolicy: IfNotPresent
 
 imagePullSecrets: []
