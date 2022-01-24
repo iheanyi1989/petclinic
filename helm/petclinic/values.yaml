@@ -11,7 +11,7 @@ image:
   # can override the above using --set image.tag=*** environment variable
   pullPolicy: IfNotPresent
 
-imagePullSecrets: docker-hub
+imagePullSecrets: dockerhub
 nameOverride: ""
 fullnameOverride: ""
 
